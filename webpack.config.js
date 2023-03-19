@@ -111,6 +111,11 @@ module.exports = {
                 exclude: /node_modules/,
                 type: 'asset/resource',
             },
+            {
+                test: /\.(eot|ttf|woff|woff2)$/,
+                type: 'asset/resource',
+                dependency: { not: ['url'] },
+            }
         ]
     },
     optimization: getOptimiztionConfig(),
